@@ -15,4 +15,9 @@ class Influencer extends Model
         'followers_count',
         'category',
     ];
+
+    public function campaigns()
+    {
+        return $this->belongsToMany(Campaign::class, 'campaign_influencer');
+    }
 }

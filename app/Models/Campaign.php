@@ -16,4 +16,9 @@ class Campaign extends Model
         'start_date',
         'end_date',
     ];
+
+    public function influencers()
+    {
+        return $this->belongsToMany(Influencer::class, 'campaign_influencer');
+    }
 }
