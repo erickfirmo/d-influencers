@@ -22,10 +22,10 @@ Para rodar o ambiente localmente utilizando Laradock, siga as instruções abaix
 ### Clone o repositório
 Clone o repositório para a sua máquina local:
 
-    ```bash
+```bash
     git clone https://github.com/erickfirmo/d-influencers.git
     cd d-influencers
-    ```
+```
 
 ### Suba o ambiente com Laradock
 
@@ -83,9 +83,9 @@ Certifique-se de que o banco de dados foi criado no MySQL, ou crie-o manualmente
    
 Após configurar o banco de dados, você precisará rodar as migrações do Laravel para criar as tabelas necessárias no banco de dados. Execute o comando:
 
-    ```bash
+```bash
     php artisan migrate --seed
-    ```
+```
 
 Agora você pode acessar a aplicação Laravel diretamente em http://localhost
 
