@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\InfluencerController;
 use App\Http\Controllers\Api\CampaignController;
+use App\Http\Controllers\Api\CampaignInfluencerController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -25,4 +26,6 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('campaigns', [CampaignController::class, 'store']);
     #Route::post('campaigns/update/{id}', [CampaignController::class, 'update']);
 
+    Route::get('campaigns/{campaign_id}/influencers', [CampaignInfluencerController::class, 'index']);
+    Route::post('campaigns/{campaign_id}/influencers', [CampaignInfluencerController::class, 'store']);
 });
