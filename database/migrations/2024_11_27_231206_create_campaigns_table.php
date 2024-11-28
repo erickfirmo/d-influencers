@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name')->nullable(false);
             $table->decimal('budget', 15, 2)->unsigned()->nullable(false);
             $table->text('description')->nullable();
-            $table->date('start_date')->nullable(false);
-            $table->date('end_date')->nullable(false);
+            $table->dateTime('start_date')->nullable(false);
+            $table->dateTime('end_date')->nullable(false);
             $table->timestamps();
         });
     }
